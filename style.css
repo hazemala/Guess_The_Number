@@ -1,0 +1,206 @@
+:root {
+    --color: #6420AA;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Tahoma, Arial;
+    background-color: #021526;
+}
+
+.container {
+    padding:20px;
+    width: 60%;
+    margin: 30px auto;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 0;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    color: var(--color);
+}
+
+.container {
+    background-color: #153448;
+}
+
+.container .content {
+    display: flex;
+    gap: 20px;
+}
+@media(max-width: 767px) {
+    .container .content {
+        flex-direction: column-reverse;
+    }
+    .container {
+        width: 70%;
+    }
+}
+@media(max-width: 530px){
+    .container {
+        width: 80%;
+    }
+}
+.container .content .play-area{
+    text-align: center;
+    flex: 1;
+}
+
+.container .content .play-area .inputs .entry-field {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.container .content .play-area .inputs .entry-field input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+    background-color: #5B99C2;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 4px 0 inset;
+    color: var(--color);
+    text-transform: uppercase;
+}
+.container .content .play-area .inputs .entry-field input.right {
+    background-color: green;
+}
+.container .content .play-area .inputs .entry-field input.semi-right {
+    background-color: orange;
+}
+.container .content .play-area .inputs .entry-field input.wrong {
+    background-color: red;
+}
+
+.container .content .play-area .check {
+    padding: 10px 25px;
+    border: none;
+    background-color: #021526;
+    color: var(--color);
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 var(--color);
+    transition: 0.3s;
+}
+.container .content .play-area .check:hover {
+    color: white;
+}
+.container .content .keys {
+    flex: 1;
+}
+.container .content .keys h3 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: var(--color);
+}
+.container .content .keys .key {
+    display: flex;
+    gap: 15px;
+}
+.container .content .keys .key p {
+    margin-bottom: 15px;
+    position: relative;
+    top: -3px;
+    color: #5B99C2;
+}
+.container .content .keys .key span {
+    min-width: 15px;
+    min-height: 15px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%; 
+}
+.container .content .keys .key .right {
+    background-color: green;
+}
+.container .content .keys .key .semi-right {
+    background-color: orange;
+}
+.container .content .keys .key .wrong {
+    background-color: red;
+}
+
+.pop-up {
+    width: 60%;
+    height: 400px;
+    background-color: white;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 0 10px 0;
+    text-align: center;
+    padding: 40px 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+
+@media(max-width: 767px) {
+    .pop-up {
+        width: 70%;
+    }
+}
+@media(max-width: 530px){
+    .pop-up {
+        width: 80%;
+        height: 450px;
+    }
+}
+
+.pop-up h3 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.pop-up p {
+    color: #777;
+    font-size: 20px;
+    margin-bottom: 80px;
+}
+
+.pop-up p span {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--mcolor);
+}
+
+.pop-up .again {
+    font-size: 20px;
+}
+
+.pop-up div {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.pop-up div .y-btn,
+.pop-up div .n-btn {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pop-up div .y-btn {
+    background-color: #009688;
+    color: white;
+}
+.pop-up div .n-btn {
+    background-color: #eee;
+}
